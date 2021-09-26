@@ -1,9 +1,11 @@
 # require './message.txt'
 
-# class File
-#   def initialize()
-#   end
-# end
+class File
+  def print
+    message = File.open("message.txt").read.chop
+    puts message
+  end
+end
 
 
 # file_name = "braille.txt"
