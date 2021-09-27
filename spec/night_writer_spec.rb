@@ -3,19 +3,19 @@
 require './lib/night_writer.rb'
 require 'RSpec'
 
-describe NW do
+describe NightWriter do
   # it 'exists' do
   #   iter = File.open("message.txt").read.chop
   #   expect(iter).to be_a(File)
   # end
 
-  it 'can read a file' do
-    iter = File.open("message.txt").read.chop
-    message1 = "Created 'braille.txt' containing 256 characters"
-    expect(iter).to eq(message1)
+  it "changes 'a' to '⠁'" do
+    translator = Braille::Translator.new
+  expect(translator.call('a')).to eq('⠁')
   end
 
-  it 'can write to a txt file' do
+
+  xit 'can write to a txt file' do
     iter = File.open("message.txt").read.chop
     message1 = "Created 'braille.txt' containing 256 characters"
     message2 = "Created 'test.txt' containing 256 characters"
