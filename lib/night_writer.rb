@@ -21,6 +21,16 @@ class NightWriter
     puts "Created '#{output}' containing '#{read.size}' characters"
     # require "pry"; binding.pry
   end
+
+  def call(word)
+    return "⠁"
+    require "pry"; binding.pry
+  end
+  # def create
+  #   file = File.new("file.txt", "w")
+  #   file.puts("Testing")
+  #   file.close
+  # end
 end
 NightWriter.new.write
 
