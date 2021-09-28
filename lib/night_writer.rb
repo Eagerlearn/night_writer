@@ -1,10 +1,13 @@
+require './lib/nw_module'
+
 class NightWriter
+  include ToBrailleable
+
   attr_reader :input,
               :output
   def initialize
     @input  = ARGV[0]
     @output = ARGV[1]
-    # require "pry"; binding.pry
   end
 
   def read
@@ -22,10 +25,10 @@ class NightWriter
     # require "pry"; binding.pry
   end
 
-  def call(word)
-    return "⠁"
-    require "pry"; binding.pry
-  end
+  # def call(word)
+  #   return "⠁"
+  #   require "pry"; binding.pry
+  # end
   # def create
   #   file = File.new("file.txt", "w")
   #   file.puts("Testing")
