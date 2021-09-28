@@ -31,8 +31,6 @@ module ToBrailleable
                   }
   end
 
-
-
   def translate_letter_to_braille(letter)
     @alph_hash[letter]
   end
